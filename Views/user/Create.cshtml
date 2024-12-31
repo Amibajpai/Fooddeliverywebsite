@@ -1,0 +1,88 @@
+﻿@model Fooddeliverywebsite.Models.Deliverypartner
+
+@{
+    ViewData["Title"] = "Create";
+}
+
+<h1>Create</h1>
+
+<h4>Deliverypartner</h4>
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form asp-action="Create">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <div class="form-group">
+                <label asp-for="Deliverypartnerid" class="control-label"></label>
+                <input asp-for="Deliverypartnerid" class="form-control" />
+                <span asp-validation-for="Deliverypartnerid" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Deliverypartnername" class="control-label"></label>
+                <input asp-for="Deliverypartnername" class="form-control" />
+                <span asp-validation-for="Deliverypartnername" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="OrderId" class="control-label"></label>
+                <input asp-for="OrderId" class="form-control" />
+                <span asp-validation-for="OrderId" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Restaurantid" class="control-label"></label>
+                <input asp-for="Restaurantid" class="form-control" />
+                <span asp-validation-for="Restaurantid" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Itemdelivered" class="control-label"></label>
+                <input asp-for="Itemdelivered" class="form-control" />
+                <span asp-validation-for="Itemdelivered" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Orderpickuptime" class="control-label"></label>
+                <input asp-for="Orderpickuptime" class="form-control" />
+                <span asp-validation-for="Orderpickuptime" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Droptime" class="control-label"></label>
+                <input asp-for="Droptime" class="form-control" />
+                <span asp-validation-for="Droptime" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Totaldeliverytime" class="control-label"></label>
+                <input asp-for="Totaldeliverytime" class="form-control" />
+                <span asp-validation-for="Totaldeliverytime" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Orderstatus" class="control-label"></label>
+                <input asp-for="Orderstatus" class="form-control" />
+                <span asp-validation-for="Orderstatus" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Remark" class="control-label"></label>
+                <input asp-for="Remark" class="form-control" />
+                <span asp-validation-for="Remark" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Revenueofday" class="control-label"></label>
+                <input asp-for="Revenueofday" class="form-control" />
+                <span asp-validation-for="Revenueofday" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Typeofrevenue" class="control-label"></label>
+                <input asp-for="Typeofrevenue" class="form-control" />
+                <span asp-validation-for="Typeofrevenue" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Create" class="btn btn-primary" />
+            </div>
+        </form>
+    </div>
+</div>
+
+<div>
+    <a asp-action="Index">Back to List</a>
+</div>
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}
